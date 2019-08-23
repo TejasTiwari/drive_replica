@@ -127,6 +127,7 @@
         display: inline-block;
         margin-left: 40px;
         position: relative;
+        margin-right: -50px;
       }
       .dropdown.toggle > input {
         display: none;
@@ -231,9 +232,62 @@
         cursor:pointer;
       }
 
+      .user-docs{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .inner-docs{
+        display:flex;
+        flex-direction: row;
+      }
+      .inner-docs div{
+        box-shadow: 5px 5px #f2ebeb;
+        margin-left:20px;
+        margin-right:20px;
+        margin-bottom:50px;
+        border-radius: 5px;
+        border-width: 100px;
+        height: 120px;
+        width:250px;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+
+      h4{
+        margin-top:10px;
+        margin-bottom:20px;
+        margin-left: 20px;
+        color: grey;
+      }
+      .doc-file{
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+      }
+      .doc-file img{
+        height:100px;
+      }
 
 
 
+
+      .current-color{
+	background-color: #c2eff0;
+}
+
+
+@media screen and (max-width:1125px){
+  .dropdown{
+    margin-right:-80px;
+  }
+}
+@media screen and (max-width:1000px){
+  .dropdown{
+    margin-right:-150px;
+  }
+}
 
     </style>
 
@@ -250,6 +304,14 @@ if(
 window.onload=function(){
   document.getElementById("#toggle-btn").click();
 };
+
+$(document).ready(function() {
+    $(".left-list > li").click(function() {
+        $(".left-list > li").removeClass('current-color');
+        $(this).addClass('current-color');
+    });
+});
+
     </script>
 
 
@@ -257,14 +319,14 @@ window.onload=function(){
 
   <header>
     <div class="top-nav">
-      <img id="logo" src="D:\Drive Replica\Logo.png">
+      <img id="logo" src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
         <input type="text" placeholder="Search Drive">
 
       <div class="top-nav-buttons">
         <a><img style="width:20px;margin-right: 20px;vertical-align:middle;margin-top:10px;" src="https://img.icons8.com/material-outlined/24/000000/help.png"></a>
         <a><img style="width:20px;margin-right: 40px;vertical-align:middle;margin-top:10px;" src="https://img.icons8.com/ios/50/000000/settings.png"></a>
         <a><img style="width:20px;margin-right: 40px;vertical-align:middle;margin-top:10px;" src="https://img.icons8.com/material-sharp/24/000000/circled-menu.png"></a>
-        <button class="user-button" type="button"><img class= "user-img" src="https://img.icons8.com/ios-filled/50/000000/circled-t.png"><img class="google-img" src="D:\Drive Replica\google.png"></button>
+        <button class="user-button" type="button"><img class= "user-img" src="https://img.icons8.com/ios-filled/50/000000/circled-t.png"><img class="google-img" src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/google.png"></button>
       </div>
     </div>
     <hr color:grey>
@@ -308,6 +370,41 @@ window.onload=function(){
   </div>
 
     <hr style=" margin-top: 15px;" color:grey>
+
+    <div class= "user-docs">
+      <h4>Quick access</h4>
+      <div class="inner-docs">
+        <div class="doc-file">
+          <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/google.png">
+          Uploaded File No. 1
+        </div>
+        <div class="doc-file">
+          <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img.jpg">
+          Uploaded File No. 2
+        </div>
+        <div class="doc-file">
+          <img src"">
+          Uploaded File No. 3
+        </div>
+      </div>
+
+      <h4>Files</h4>
+      <div class="inner-docs">
+        <div class="doc-file">
+          <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img-2.jpg">
+          Uploaded File No. 1
+        </div>
+        <div class="doc-file">
+          <img src"">
+          Uploaded File No. 2
+        </div>
+        <div class="doc-file">
+          <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
+          Uploaded File No. 3
+        </div>
+      </div>
+    </div>
+
       </div>
 
       <div style="height:700px;;margin-top:-10px; border-left:1px solid grey;"></div>
