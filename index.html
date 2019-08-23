@@ -136,6 +136,7 @@
         border-radius: 5px;
         border: none;
         box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+
       }
       .dropdown.toggle>label:hover{
         cursor: pointer;
@@ -267,7 +268,7 @@
         text-align: justify;
       }
       .doc-file img{
-        height:100px;
+        height:80%;
       }
 
 
@@ -277,15 +278,42 @@
 	background-color: #c2eff0;
 }
 
-
-@media screen and (max-width:1125px){
-  .dropdown{
-    margin-right:-80px;
+@media screen and(max-width:1220px){
+  .above-hr-buttons{
+    margin-left:50%;
   }
 }
-@media screen and (max-width:1000px){
-  .dropdown{
-    margin-right:-150px;
+@media screen and (max-width:1120px){
+    .doc-file{
+      width:10%;
+    }
+}
+@media screen and (max-width:970px){
+  .top-nav input{
+    margin-left: 100px;
+    margin-right:-50px;
+  }
+  .user-button {
+    width:120px;
+  }
+  .user-button .google-img {
+    width:70px;
+  }
+  .user-button .user-img{
+    width:25px;
+  }
+  .top-nav-buttons{
+    margin-right:0px;
+  }
+}
+@media screen and (max-width:756px){
+  .top-nav input{
+    margin-left:30px;
+  }
+}
+@media screen and (max-width:400px){
+  .long-line{
+    height: 0px;
   }
 }
 
@@ -346,7 +374,7 @@ $(document).ready(function() {
         </ul>
       </div>
 
-      <div style="height:700px;;margin-top:-10px; border-left:1px solid grey;"></div>
+      <div class="long-line" style="height:700px;margin-top:-10px; border-left:1px solid grey;"></div>
 
       <div class="right-nav">
 
@@ -374,15 +402,15 @@ $(document).ready(function() {
     <div class= "user-docs">
       <h4>Quick access</h4>
       <div class="inner-docs">
-        <div class="doc-file">
+        <div id="first" class="doc-file">
           <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/google.png">
           Uploaded File No. 1
         </div>
-        <div class="doc-file">
+        <div id="second" class="doc-file">
           <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img.jpg">
           Uploaded File No. 2
         </div>
-        <div class="doc-file">
+        <div id="third" class="doc-file">
           <img src"">
           Uploaded File No. 3
         </div>
@@ -390,15 +418,15 @@ $(document).ready(function() {
 
       <h4>Files</h4>
       <div class="inner-docs">
-        <div class="doc-file">
+        <div id="first" class="doc-file">
           <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img-2.jpg">
           Uploaded File No. 1
         </div>
-        <div class="doc-file">
+        <div id="second" class="doc-file">
           <img src"">
           Uploaded File No. 2
         </div>
-        <div class="doc-file">
+        <div id="third" class="doc-file">
           <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
           Uploaded File No. 3
         </div>
@@ -407,7 +435,7 @@ $(document).ready(function() {
 
       </div>
 
-      <div style="height:700px;;margin-top:-10px; border-left:1px solid grey;"></div>
+      <div class= "long-line" style="height:700px;;margin-top:-10px; border-left:1px solid grey;"></div>
 
       <div class="side-buttons">
         <img style="width:25px; margin-bottom:30px; margin-top:20px;" src="https://img.icons8.com/ultraviolet/40/000000/planner.png">
