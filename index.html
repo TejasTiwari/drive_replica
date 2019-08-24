@@ -102,7 +102,6 @@
       .above-hr-buttons{
         display:flex;
         flex-direction: row;
-        margin-left:70%;
       }
       .above-hr-buttons img{
         cursor: pointer;
@@ -127,7 +126,7 @@
         display: inline-block;
         margin-left: 40px;
         position: relative;
-        margin-right: -50px;
+        margin-right: 70%;
       }
       .dropdown.toggle > input {
         display: none;
@@ -239,8 +238,8 @@
         flex-direction: column;
       }
       .inner-docs{
-        display:flex;
-        flex-direction: row;
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
       }
       .inner-docs div{
         box-shadow: 5px 5px #f2ebeb;
@@ -278,6 +277,7 @@
 	background-color: #c2eff0;
 }
 
+
 @media screen and(max-width:1220px){
   .above-hr-buttons{
     margin-left:50%;
@@ -287,6 +287,16 @@
     .doc-file{
       width:10%;
     }
+}
+@media screen and (max-width:1180px){
+  .inner-docs{
+    display:inline-grid;
+    grid-template-columns: auto auto;
+  }
+  #toggle-btn{
+    margin-right: -30px;
+    font-size: 10px;
+  }
 }
 @media screen and (max-width:970px){
   .top-nav input{
@@ -304,6 +314,15 @@
   }
   .top-nav-buttons{
     margin-right:0px;
+  }
+  #toggle-btn{
+    margin-right: -50px;
+  }
+}
+@media screen and (max-width:870px){
+  .inner-docs{
+    display: inline-grid;
+      grid-template-columns: auto;
   }
 }
 @media screen and (max-width:756px){
@@ -399,38 +418,51 @@ $(document).ready(function() {
 
     <hr style=" margin-top: 15px;" color:grey>
 
-    <div class= "user-docs">
+    <div id= "file-menu" class= "user-docs">
       <h4>Quick access</h4>
       <div class="inner-docs">
-        <div id="first" class="doc-file">
+        <div class="doc-file">
           <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/google.png">
           Uploaded File No. 1
         </div>
-        <div id="second" class="doc-file">
+        <div class="doc-file">
           <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img.jpg">
           Uploaded File No. 2
         </div>
-        <div id="third" class="doc-file">
+        <div class="doc-file">
           <img src"">
           Uploaded File No. 3
+        </div>
+        <div class="doc-file">
+          <img src"">
+          Uploaded File No. 4
+        </div>
+        <div class="doc-file">
+          <img src"">
+          Uploaded File No. 5
         </div>
       </div>
 
       <h4>Files</h4>
       <div class="inner-docs">
-        <div id="first" class="doc-file">
+        <div class="doc-file">
           <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img-2.jpg">
           Uploaded File No. 1
         </div>
-        <div id="second" class="doc-file">
+        <div class="doc-file">
           <img src"">
           Uploaded File No. 2
         </div>
-        <div id="third" class="doc-file">
+        <div class="doc-file">
           <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
           Uploaded File No. 3
         </div>
+        <div class="doc-file">
+          <img src"">
+          Uploaded File No. 3
+        </div>
       </div>
+
     </div>
 
       </div>
