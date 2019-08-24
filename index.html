@@ -1,480 +1,501 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
+<head>
 
-    <style>
+  <style>
 
-    .top-nav{
-      display: flex;
-      flex-direction: row;
-    }
-    .top-nav input{
-      background-color: #f0f2f0;
-      width:50%;
-      margin-left: 155px;
-      border-radius: 10px;
-      border: none;
-      font-size: 20px;
-      padding-left: 30px;
-    }
-    .top-nav-buttons{
-      display: flex;
-      flex-direction: row;
-      margin-left: 10%;
-    }
-    .top-nav-buttons img:hover{
-      border-radius: 100%;
-      background-color: #d3dbd3;
-      cursor:pointer;
-    }
-
-
-      #logo{
-        width:120px;
-        height:auto;
-      }
-
-      .user-button{
-        width:150px;
-        border-radius: 10px;
-        border-style: solid;
-        background-color: white;
-        cursor:pointer;
-      }
-      .user-button .user-img{
-        float:right;
-        width:35px;
-      }
-      .user-button google-img{
-        float:left;
-      }
-
-      .container{
-        display: flex;
-        flex-direction: row;
-      }
-
-      .left-nav{
-        width:250px;
-      }
-      #new-btn {
-        margin-top:5px;
-        margin-left: 15px;
-        border-radius: 30px;
-        width:120px;
-        background-color: white;
-        height:50px;
-        cursor:pointer;
-        border-style: solid;
-      }
-      .left-list{
-        margin-top:30px;
-        list-style: none;
-      }
-      .left-list li{
-
-        border-radius: 15%;
-        box-sizing: content-box;
-        cursor: pointer;
-        height:30px;
-        margin-bottom: 20px;
-        vertical-align: middle;
-        color: grey
-
-      }
-      .left-list li:hover{
-        background-color:#ebf0eb;
-      }
-      .left-list li img{
-        width: 20px;
-          margin-right:15px;
-          margin-bottom:-5px;
-      }
-
-
-
-
-      .above-hr{
-        display:flex;
-        flex-direction: row;
-      }
-      .above-hr-buttons{
-        display:flex;
-        flex-direction: row;
-      }
-      .above-hr-buttons img{
-        cursor: pointer;
-        margin-right:30px;
-        margin-left: 30px;
-        margin-top: 10px;
-      }
-      .above-hr-buttons img:hover{
-        background-color: #d3dbd3;
-      }
-
-      .right-nav{
-        width:75%;
-        margin-top:5px;
-        }
-
-
-      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
-      .dropdown {
-        width: 150px;
-        display: inline-block;
-        margin-left: 40px;
-        position: relative;
-        margin-right: 70%;
-      }
-      .dropdown.toggle > input {
-        display: none;
-      }
-      .dropdown > a, .dropdown.toggle > label {
-        border-radius: 5px;
-        border: none;
-        box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
-
-      }
-      .dropdown.toggle>label:hover{
-        cursor: pointer;
-      }
-
-      .dropdown > a::after, .dropdown.toggle > label::after {
-        content: "";
-        float: right;
-        margin: 15px 15px 0 0;
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 10px solid #CCC;
-      }
-
-      .dropdown ul {
-        list-style-type: none;
-        display: block;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        width: 200%;
-        box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
-        overflow: hidden;
-      }
-      .dropdown a, .dropdown.toggle > label {
-        display: block;
-        padding: 0 0 0 10px;
-        text-decoration: none;
-        line-height: 40px;
-        font-size: 13px;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-style:
-        color: #999;
-        background-color: #FFF;
-      }
-      .dropdown li {
-        height: 0;
-        overflow: hidden;
-        transition: all 500ms;
-      }
-      .dropdown.hover li {
-        transition-delay: 300ms;
-      }
-      .dropdown li:first-child a {
-        border-radius: 2px 2px 0 0;
-      }
-      .dropdown li:last-child a {
-        border-radius: 0 0 2px 2px;
-      }
-      .dropdown li:first-child a::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid #FFF;
-        margin: -10px 0 0 30px;
-      }
-      .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
-        background-color: white;
-        color: #666;
-      }
-      .dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
-        border-top-color: black;
-      }
-      .dropdown li:first-child a:hover::before {
-        border-bottom-color: #EEE;
-      }
-      .dropdown.toggle> input:checked ~ ul li {
-        height: 30px;
-      }
-      .dropdown.toggle > input:checked ~ ul li:first-child {
-        padding-top: 15px;
-      }
-
-      .drop-list li img{
-        width: 20px;
-          margin-right:15px;
-          margin-bottom:-5px;
-      }
-
-
-      .side-buttons{
-        margin-left: 40px;
-        display:flex;
-        flex-direction: column;
-      }
-      .side-buttons img:hover{
-        cursor:pointer;
-      }
-
-      .user-docs{
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-      }
-      .inner-docs{
-        display: inline-grid;
-        grid-template-columns: auto auto auto;
-      }
-      .inner-docs div{
-        box-shadow: 5px 5px #f2ebeb;
-        margin-left:20px;
-        margin-right:20px;
-        margin-bottom:50px;
-        border-radius: 5px;
-        border-width: 100px;
-        height: 120px;
-        width:250px;
-        text-align: center;
-        vertical-align: middle;
-        cursor: pointer;
-      }
-
-      h4{
-        margin-top:10px;
-        margin-bottom:20px;
-        margin-left: 20px;
-        color: grey;
-      }
-      .doc-file{
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-      }
-      .doc-file img{
-        height:80%;
-      }
-
-
-
-
-      .current-color{
-	background-color: #c2eff0;
-}
-
-
-@media screen and(max-width:1220px){
-  .above-hr-buttons{
-    margin-left:50%;
+  .top-nav{
+    display: flex;
+    flex-direction: row;
   }
+  .top-nav input{
+    background-color: #f0f2f0;
+    width:50%;
+    margin-left: 155px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    padding-left: 30px;
+  }
+  .top-nav-buttons{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+  }
+  .top-nav-buttons img:hover{
+    border-radius: 100%;
+    background-color: #d3dbd3;
+    cursor:pointer;
+  }
+
+
+  #logo{
+    width:120px;
+    height:auto;
+  }
+
+  .user-button{
+    width:150px;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: white;
+    cursor:pointer;
+  }
+  .user-button .user-img{
+    float:right;
+    width:35px;
+  }
+  .user-button google-img{
+    float:left;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left-nav{
+    width:250px;
+  }
+  #new-btn {
+    margin-top:5px;
+    margin-left: 15px;
+    border-radius: 30px;
+    width:120px;
+    background-color: white;
+    height:50px;
+    cursor:pointer;
+    border-style: solid;
+  }
+  .left-list{
+    margin-top:30px;
+    list-style: none;
+  }
+  .left-list li{
+
+    border-radius: 15%;
+    box-sizing: content-box;
+    cursor: pointer;
+    height:30px;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    color: grey
+
+  }
+  .left-list li:hover{
+    background-color:#ebf0eb;
+  }
+  .left-list li img{
+    width: 20px;
+    margin-right:15px;
+    margin-bottom:-5px;
+  }
+
+
+
+
+  .above-hr{
+    display:flex;
+    flex-direction: row;
+  }
+  .above-hr-buttons{
+    display:flex;
+    flex-direction: row;
+  }
+  .above-hr-buttons img{
+    cursor: pointer;
+    margin-right:30px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .above-hr-buttons img:hover{
+    background-color: #d3dbd3;
+  }
+
+  .right-nav{
+    width:75%;
+    margin-top:5px;
+  }
+
+
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+  .dropdown {
+    width: 150px;
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+    margin-right: 45%;
+  }
+  .dropdown.toggle > input {
+    display: none;
+  }
+  .dropdown > a, .dropdown.toggle > label {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+
+  }
+  .dropdown.toggle>label:hover{
+    cursor: pointer;
+  }
+
+  .dropdown > a::after, .dropdown.toggle > label::after {
+    content: "";
+    float: right;
+    margin: 15px 15px 0 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #CCC;
+  }
+
+  .dropdown ul {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 200%;
+    box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+  .dropdown a, .dropdown.toggle > label {
+    display: block;
+    padding: 0 0 0 10px;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style:
+    color: #999;
+    background-color: #FFF;
+  }
+  .dropdown li {
+    height: 0;
+    overflow: hidden;
+    transition: all 500ms;
+  }
+  .dropdown.hover li {
+    transition-delay: 300ms;
+  }
+  .dropdown li:first-child a {
+    border-radius: 2px 2px 0 0;
+  }
+  .dropdown li:last-child a {
+    border-radius: 0 0 2px 2px;
+  }
+  .dropdown li:first-child a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #FFF;
+    margin: -10px 0 0 30px;
+  }
+  .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
+    background-color: white;
+    color: #666;
+  }
+  .dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+    border-top-color: black;
+  }
+  .dropdown li:first-child a:hover::before {
+    border-bottom-color: #EEE;
+  }
+  .dropdown.toggle> input:checked ~ ul li {
+    height: 30px;
+  }
+  .dropdown.toggle > input:checked ~ ul li:first-child {
+    padding-top: 15px;
+  }
+
+  .drop-list li img{
+    width: 20px;
+    margin-right:15px;
+    margin-bottom:-5px;
+  }
+
+
+  .side-buttons{
+    margin-left: 40px;
+    display:flex;
+    flex-direction: column;
+  }
+  .side-buttons img:hover{
+    cursor:pointer;
+  }
+
+  .user-docs{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  .inner-docs{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+  }
+  .inner-docs div{
+    box-shadow: 5px 5px #f2ebeb;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:50px;
+    border-radius: 5px;
+    border-width: 100px;
+    height: 120px;
+    width:250px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  h4{
+    margin-top:10px;
+    margin-bottom:20px;
+    margin-left: 20px;
+    color: grey;
+  }
+  .doc-file{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+  .doc-file img{
+    height:80%;
+  }
+
+
+#blank{
+  display: none;
 }
-@media screen and (max-width:1120px){
+
+  .current-color{
+    background-color: #c2eff0;
+  }
+
+
+  @media screen and(max-width:1220px){
+    .above-hr-buttons{
+      margin-left:50%;
+    }
+  }
+  @media screen and (max-width:1120px){
     .doc-file{
       width:10%;
     }
-}
-@media screen and (max-width:1180px){
-  .inner-docs{
-    display:inline-grid;
-    grid-template-columns: auto auto;
   }
-  #toggle-btn{
-    margin-right: -30px;
-    font-size: 10px;
+  @media screen and (max-width:1180px){
+    .inner-docs{
+      display:inline-grid;
+      grid-template-columns: auto auto;
+    }
+    #toggle-btn{
+      margin-right: -30px;
+      font-size: 10px;
+    }
+    .user-docs{
+      max-height: 1000px;
+      overflow: visible;
+    }
   }
-}
-@media screen and (max-width:970px){
-  .top-nav input{
-    margin-left: 100px;
-    margin-right:-50px;
+  @media screen and (max-width:970px){
+    .top-nav input{
+      margin-left: 100px;
+      margin-right:-50px;
+    }
+    .user-button {
+      width:120px;
+    }
+    .user-button .google-img {
+      width:70px;
+    }
+    .user-button .user-img{
+      width:25px;
+    }
+    .top-nav-buttons{
+      margin-right:0px;
+    }
+    #toggle-btn{
+      margin-right: -50px;
+    }
   }
-  .user-button {
-    width:120px;
-  }
-  .user-button .google-img {
-    width:70px;
-  }
-  .user-button .user-img{
-    width:25px;
-  }
-  .top-nav-buttons{
-    margin-right:0px;
-  }
-  #toggle-btn{
-    margin-right: -50px;
-  }
-}
-@media screen and (max-width:870px){
-  .inner-docs{
-    display: inline-grid;
+  @media screen and (max-width:870px){
+    .inner-docs{
+      display: inline-grid;
       grid-template-columns: auto;
+    }
   }
-}
-@media screen and (max-width:756px){
-  .top-nav input{
-    margin-left:30px;
+  @media screen and (max-width:830px){
+    .dropdown.toggle{
+      width:700px;
+    }
   }
-}
-@media screen and (max-width:400px){
-  .long-line{
-    height: 0px;
+  @media screen and (max-width:756px){
+    .top-nav input{
+      margin-left:30px;
+    }
+  }
+    @media screen and (max-width:708px){
+      .dropdown.toggle{
+        width:1000px;
+      }
+    }
+
+@media screen and (max-width:500px){
+  .user-docs{
+    max-height: 1000px;
+    overflow: visible;
   }
 }
 
-    </style>
+</style>
 
-    <script>
-    $(document).click(function(event) {
-if(
+<script>
+
+$(document).click(function(event) {
+  if(
   $('.toggle > input').is(':checked') &&
   !$(event.target).parents('.toggle').is('.toggle')
-) {
-  $('.toggle > input').prop('checked', false);
-}
+  ) {
+    $('.toggle > input').prop('checked', false);
+  }
 })
 
-window.onload=function(){
-  document.getElementById("#toggle-btn").click();
-};
+}
 
-$(document).ready(function() {
+  $(document).ready(function() {
     $(".left-list > li").click(function() {
-        $(".left-list > li").removeClass('current-color');
-        $(this).addClass('current-color');
+      $(".left-list > li").removeClass('current-color');
+      $(this).addClass('current-color');
     });
-});
+  });
 
-    </script>
+</script>
 
 
-  </head>
+</head>
 
-  <header>
-    <div class="top-nav">
-      <img id="logo" src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
-        <input type="text" placeholder="Search Drive">
+<header>
+  <div class="top-nav">
+    <img id="logo" src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
+    <input type="text" placeholder="Search Drive">
 
-      <div class="top-nav-buttons">
-        <a><img style="width:20px;margin-right: 20px;vertical-align:middle;margin-top:10px;" src="https://img.icons8.com/material-outlined/24/000000/help.png"></a>
-        <a><img style="width:20px;margin-right: 40px;vertical-align:middle;margin-top:10px;" src="https://img.icons8.com/ios/50/000000/settings.png"></a>
-        <a><img style="width:20px;margin-right: 40px;vertical-align:middle;margin-top:10px;" src="https://img.icons8.com/material-sharp/24/000000/circled-menu.png"></a>
-        <button class="user-button" type="button"><img class= "user-img" src="https://img.icons8.com/ios-filled/50/000000/circled-t.png"><img class="google-img" src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/google.png"></button>
-      </div>
+    <div class="top-nav-buttons">
+      <a><img style="width:20px;margin-right: 20px;vertical-align:middle;margin-top:10px;" src="https://img.icons8.com/material-outlined/24/000000/help.png"></a>
+      <a><img style="width:20px;margin-right: 40px;vertical-align:middle;margin-top:10px;" src="https://img.icons8.com/ios/50/000000/settings.png"></a>
+      <a><img style="width:20px;margin-right: 40px;vertical-align:middle;margin-top:10px;" src="https://img.icons8.com/material-sharp/24/000000/circled-menu.png"></a>
+      <button class="user-button" type="button"><img class= "user-img" src="https://img.icons8.com/ios-filled/50/000000/circled-t.png"><img class="google-img" src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/google.png"></button>
     </div>
-    <hr color:grey>
-  </header>
+  </div>
+  <hr color:grey>
+</header>
 
-  <body>
-    <div class="container">
-      <div class="left-nav">
-        <button id="new-btn" type="button"><img style="width:30px; float:left; margin-left:10px; margin-top:5px;" src="https://img.icons8.com/dotty/80/000000/plus.png"><p>New</p></button>
-        <ul class="left-list">
-          <li><a><img src="https://img.icons8.com/metro/26/000000/checked-2.png">Priority</a></li>
-          <li><a><img src="https://img.icons8.com/windows/50/000000/google-docs.png">My Drive</a></li>
-          <li><a><img src="https://img.icons8.com/material-two-tone/50/000000/conference-call.png">Shared With Me</a></li>
-          <li><a><img src="https://img.icons8.com/material-outlined/50/000000/clock.png">Recent</a></li>
-          <li><a><img src="https://img.icons8.com/material/24/000000/popular-topic--v3.png">Starred</a></li>
-          <li><a><img src="https://img.icons8.com/ios/50/000000/trash.png">Trash</a></li>
-        </ul>
-      </div>
-
-      <div class="long-line" style="height:700px;margin-top:-10px; border-left:1px solid grey;"></div>
-
-      <div class="right-nav">
-
-        <div class="above-hr">
-        <div class="dropdown toggle">
-      <input id="t1" type="checkbox" checked>
-      <label id="toggle-btn" for="t1">My Drive</label>
-      <ul class="drop-list">
-        <li><a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/new.png">New Folder</a></li>
-        <li><a href="#"><img src="https://img.icons8.com/android/24/000000/upload.png">Upload Files</a></li>
-        <li><a href="#"><img src="https://img.icons8.com/android/24/000000/upload.png">Upload Folder</a></li>
-        <li><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/google-docs.png">Google Docs</a></li>
-        <li><a href="#"><img src="https://img.icons8.com/color/48/000000/google-sheets.png">Google Sheets</a></li>
+<body>
+  <div class="container">
+    <div class="left-nav">
+      <button id="new-btn" type="button"><img style="width:30px; float:left; margin-left:10px; margin-top:5px;" src="https://img.icons8.com/dotty/80/000000/plus.png"><p>New</p></button>
+      <ul class="left-list">
+        <li><a onclick="myFunction() myFunction2()"><img src="https://img.icons8.com/metro/26/000000/checked-2.png">Priority</a></li>
+        <li><a><img src="https://img.icons8.com/windows/50/000000/google-docs.png">My Drive</a></li>
+        <li><a><img src="https://img.icons8.com/material-two-tone/50/000000/conference-call.png">Shared With Me</a></li>
+        <li><a><img src="https://img.icons8.com/material-outlined/50/000000/clock.png">Recent</a></li>
+        <li><a><img src="https://img.icons8.com/material/24/000000/popular-topic--v3.png">Starred</a></li>
+        <li><a><img src="https://img.icons8.com/ios/50/000000/trash.png">Trash</a></li>
       </ul>
     </div>
 
-    <div class="above-hr-buttons">
-      <a><img style="width:15px; vertical-align:middle;" src="https://img.icons8.com/android/24/000000/menu.png"></a>
-      <a><img style="width:15px; vertical-align:middle;" src="https://img.icons8.com/ios/50/000000/view-details.png"></a>
+    <div class="long-line" style="height:700px;margin-top:-10px; border-left:1px solid grey;"></div>
+
+    <div class="right-nav">
+
+      <div class="above-hr">
+        <div class="dropdown toggle">
+          <input id="t1" type="checkbox">
+          <label for="t1"><a id="toggle-button">My Drive</a></label>
+          <ul class="drop-list">
+            <li><a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/new.png">New Folder</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/android/24/000000/upload.png">Upload Files</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/android/24/000000/upload.png">Upload Folder</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/google-docs.png">Google Docs</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/color/48/000000/google-sheets.png">Google Sheets</a></li>
+          </ul>
+        </div>
+
+        <div class="above-hr-buttons">
+          <a><img style="width:15px; vertical-align:middle;" src="https://img.icons8.com/android/24/000000/menu.png"></a>
+          <a><img style="width:15px; vertical-align:middle;" src="https://img.icons8.com/ios/50/000000/view-details.png"></a>
+        </div>
+      </div>
+
+      <hr style=" margin-top: 15px;" color:grey>
+
+      <div id= "file-menu" class= "user-docs">
+        <h4>Quick access</h4>
+        <div class="inner-docs">
+          <div class="doc-file">
+            <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/google.png">
+            Uploaded File No. 1
+          </div>
+          <div class="doc-file">
+            <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img.jpg">
+            Uploaded File No. 2
+          </div>
+          <div class="doc-file">
+            <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/google.png">
+            Uploaded File No. 3
+          </div>
+          <div class="doc-file">
+            <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
+            Uploaded File No. 4
+          </div>
+          <div class="doc-file">
+            <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
+            Uploaded File No. 5
+          </div>
+        </div>
+
+        <h4>Files</h4>
+        <div class="inner-docs">
+          <div class="doc-file">
+            <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img-2.jpg">
+            Uploaded File No. 1
+          </div>
+          <div class="doc-file">
+            <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img.jpg">
+            Uploaded File No. 2
+          </div>
+          <div class="doc-file">
+            <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
+            Uploaded File No. 3
+          </div>
+          <div class="doc-file">
+            <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img.jpg">
+            Uploaded File No. 4
+          </div>
+        </div>
+
+        <div id="blank" class="user-docs"></div>
+
+      </div>
+      <hr color="grey">
+    </div>
+
+    <div class= "long-line" style="height:700px;;margin-top:-10px; border-left:1px solid grey;"></div>
+
+    <div class="side-buttons">
+      <img style="width:25px; margin-bottom:30px; margin-top:20px;" src="https://img.icons8.com/ultraviolet/40/000000/planner.png">
+      <img style="width:25px; margin-bottom:30px" src="https://img.icons8.com/offices/16/000000/reflector-bulb.png">
+      <img style="width:25px; margin-bottom:30px" src="https://img.icons8.com/ultraviolet/40/000000/checked-2.png">
     </div>
   </div>
 
-    <hr style=" margin-top: 15px;" color:grey>
-
-    <div id= "file-menu" class= "user-docs">
-      <h4>Quick access</h4>
-      <div class="inner-docs">
-        <div class="doc-file">
-          <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/google.png">
-          Uploaded File No. 1
-        </div>
-        <div class="doc-file">
-          <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img.jpg">
-          Uploaded File No. 2
-        </div>
-        <div class="doc-file">
-          <img src"">
-          Uploaded File No. 3
-        </div>
-        <div class="doc-file">
-          <img src"">
-          Uploaded File No. 4
-        </div>
-        <div class="doc-file">
-          <img src"">
-          Uploaded File No. 5
-        </div>
-      </div>
-
-      <h4>Files</h4>
-      <div class="inner-docs">
-        <div class="doc-file">
-          <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/upload-img-2.jpg">
-          Uploaded File No. 1
-        </div>
-        <div class="doc-file">
-          <img src"">
-          Uploaded File No. 2
-        </div>
-        <div class="doc-file">
-          <img src="https://raw.githubusercontent.com/TejasTiwari/drive_replica/master/Logo.png">
-          Uploaded File No. 3
-        </div>
-        <div class="doc-file">
-          <img src"">
-          Uploaded File No. 3
-        </div>
-      </div>
-
-    </div>
-
-      </div>
-
-      <div class= "long-line" style="height:700px;;margin-top:-10px; border-left:1px solid grey;"></div>
-
-      <div class="side-buttons">
-        <img style="width:25px; margin-bottom:30px; margin-top:20px;" src="https://img.icons8.com/ultraviolet/40/000000/planner.png">
-        <img style="width:25px; margin-bottom:30px" src="https://img.icons8.com/offices/16/000000/reflector-bulb.png">
-        <img style="width:25px; margin-bottom:30px" src="https://img.icons8.com/ultraviolet/40/000000/checked-2.png">
-      </div>
-    </div>
-
-  </body>
+</body>
 </html>
